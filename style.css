@@ -19,11 +19,56 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
   /* overflow: hidden; */
+}
+
+.header_glavnayaStranica {
+  background: url(img/image\ 101.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 975px;
+  border-radius: none;
+}
+
+.block_dostavka_img_background {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 150px;
+}
+
+.background_img_dostavka_block {
+  position: relative;
+  z-index: 1;
+}
+
+.background_img_dostavka_block::after {
+  content: '';
+  display: flex;
+  position: absolute;
+  top: -100px;
+  right: 100px;
+  width: 504.417px;
+  height: 625.462px;
+  transform: rotate(32.828deg);
+  flex-shrink: 0;
+  border-radius: 625.462px;
+  background: #6b535f;
+  filter: blur(125px);
+  z-index: -1;
+}
+
+.background_img_dostavka {
+  display: flex;
+
+  margin-left: 100px;
 }
 
 body {
   background-color: #041215;
+
   /* overflow: hidden; */
 }
 
@@ -141,10 +186,10 @@ main {
   line-height: normal;
   letter-spacing: normal;
   text-transform: uppercase;
+  margin-top: 150px;
 }
 
-.main_katalog_title,
-.dostavka_block {
+.main_katalog_title {
   position: relative;
 }
 
@@ -165,6 +210,10 @@ main {
 body,
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 .katalog_block .color_block:nth-child(1) {
@@ -195,6 +244,211 @@ html {
   background: #22292b;
 }
 
+.katalog_title_header {
+  color: #fff;
+  font-family: var(--Cormorant-Light);
+  font-size: 100px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  width: 500px;
+}
+
+.katalog_text_header {
+  display: flex;
+}
+
+.katalog_text_header_block {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.block_katalog_tree {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: end;
+  position: relative;
+  z-index: 1;
+}
+
+.katalog_block_nav {
+  max-width: 540px;
+  min-height: 310px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 30px 0 0 50px;
+  margin-top: 80px;
+}
+
+.katalog_text_header_block::after {
+  content: '';
+  position: absolute;
+  top: 250px;
+  left: -250px;
+  width: 707.545px;
+  height: 236.872px;
+  transform: rotate(32.828deg);
+  border-radius: 707.545px;
+  background: #7d2253;
+  filter: blur(125px);
+  z-index: -1;
+  display: flex;
+}
+
+.block_katalog_tree::after {
+  left: -90px;
+  top: 370px;
+  position: absolute;
+  content: '';
+  width: 879.44px;
+  height: 211.054px;
+  transform: rotate(32.828deg);
+  border-radius: 879.44px;
+  background: #43ffd2;
+  filter: blur(125px);
+  z-index: -1;
+}
+
+.katalog_block_2 {
+  width: 445px;
+  height: 281px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 50px;
+}
+
+.katalog_block_3 {
+  width: 540px;
+  height: 264px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 30px 70px;
+}
+
+.katalog_flowers_2,
+.katalog_flowers_3 {
+  width: 271px;
+  color: #43ffd2;
+  font-family: var(--Oswald-Regular);
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.spisok_2,
+.spisok_3 {
+  color: #fff;
+  font-family: var(--Oswald-ExtraLight);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.72px;
+  text-transform: uppercase;
+  list-style: inside;
+}
+
+.katalog_spisok_2 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.view_katalog {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 30px;
+  right: 0;
+  bottom: 0;
+  color: #d978ac;
+  font-family: var(--Oswald-Regular);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1.2px;
+  text-decoration-line: underline;
+  text-transform: uppercase;
+}
+
+.katalog_flowers {
+  color: #43ffd2;
+  font-family: var(--Oswald-Regular);
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.spisok {
+  color: #fff;
+  font-family: var(--Oswald-ExtraLight);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.72px;
+  text-transform: uppercase;
+  list-style: inside;
+}
+
+.katalog_text_header_hd {
+  color: #fff;
+  font-family: var(--Oswald-ExtraLight);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 26px; /* 130% */
+  letter-spacing: 0.8px;
+  width: 530px;
+  margin-left: 100px;
+}
+
+.katalog_block_header {
+  margin-bottom: 150px;
+}
+.katalog_text_span {
+  color: #fff;
+  font-family: var(--Oswald-ExtraLight);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: 0.4px;
+  margin-left: 100px;
+}
+
+.katalog_title_text_block {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
 .katalog_block .color_block:nth-child(1):hover::before {
   opacity: 1;
   transition: 400ms;
@@ -213,7 +467,7 @@ html {
 }
 
 .dostavka_oplata_block {
-  margin: 100px 0;
+  margin: 35px 0;
 }
 
 .dostavka_pay {
@@ -229,11 +483,12 @@ html {
   align-items: center;
   justify-content: space-between;
   border-radius: 20px;
-  backdrop-filter: blur(10px);
 }
 
 .sposob_text {
-  background: url(img/photo_2023-11-08_14-37-42.jpg);
+  background: url(img/dostavka.png);
+  background: transparent;
+  background: rgba(1, 0, 1.1, 0.2);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -254,6 +509,7 @@ html {
   text-transform: uppercase;
   border-radius: 50%;
   word-spacing: 5px;
+  box-shadow: 3px 3px rgb(236, 105, 105), -1em 0 0.4em rgb(255, 218, 117);
 }
 
 .vozvrat_text {
@@ -308,7 +564,8 @@ html {
 .usloviya_block {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: right;
+  gap: 150px;
 }
 
 .usloviya_dostavki {
@@ -333,9 +590,72 @@ html {
   max-width: 895px;
 }
 
+.background_usloviya_img {
+  position: relative;
+}
+
+.background_usloviya_img::after {
+  top: 0;
+  right: 0;
+  position: absolute;
+  display: flex;
+  content: '';
+  width: 537.997px;
+  height: 431.162px;
+  transform: rotate(-71.859deg);
+  flex-shrink: 0;
+  border-radius: 537.997px;
+  background: #6b535f;
+  filter: blur(125px);
+  z-index: -1;
+}
 .dopolnitelno_text_problems {
   display: block;
   padding: 20px 0;
+}
+
+.block_podpis_img {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rose3 {
+  margin-bottom: -150px;
+  margin-left: 70px;
+}
+
+.flowers_podpis {
+  transform: rotate(-14.166deg);
+  color: #faf7f8;
+  font-family: var(--WindSong);
+  font-size: 160px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 70px; /* 43.75% */
+  text-transform: capitalize;
+}
+
+.block_img_podpis {
+  display: flex;
+  position: relative;
+
+  z-index: -1;
+}
+
+.block_img_podpis::after {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 354.93px;
+  height: 364.216px;
+  transform: rotate(32.828deg);
+  flex-shrink: 0;
+  fill: #dd0f76;
+  filter: blur(125px);
+  z-index: 2;
 }
 
 .dopolnitelno_text_line {
@@ -389,12 +709,20 @@ html {
 
 .footer_block {
   background: #000;
+  z-index: 1;
 }
 .footer_list {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 20px 0;
+}
+
+.telegram_background {
+  width: 24px;
+  height: 24px;
+  background: #43ffd2;
+  border-radius: 15%;
 }
 
 .footer_icon {
@@ -531,12 +859,106 @@ html {
   padding: 0 10px 0 10px;
 }
 
+.popular_block_image {
+  display: flex;
+  justify-content: space-between;
+}
+
 .main_text .glowing:nth-child(1) {
   margin-left: 0;
   animation-name: lione1;
   animation-delay: 1s;
   animation-duration: 2s;
   animation-iteration-count: infinite;
+}
+
+.block_img_popular_text {
+  color: #fff;
+  font-family: var(--Oswald-ExtraLight);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.block_img_popular_summa {
+  color: #fff;
+  font-family: var(--Oswald-Light);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.56px;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+}
+
+.btn {
+  font-family: var(--Oswald-Regular);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.button_keys {
+  position: relative;
+  font-weight: 600;
+  color: #382b22;
+  padding: 1.25em 2em;
+  /* background: #2486c7; */
+  border: 2px solid #85b18e;
+  border-radius: 0.75em;
+  transition: transform 0.15s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.button_keys::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgb(71, 201, 114);
+  border-radius: inherit;
+  transform: translate3d(0, 0.75em, -1em);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+button.button_keys:hover {
+  /* background: #0cc2f0; */
+  transform: translate(0, 0.25em);
+}
+button.button_keys:hover::before {
+  /* box-shadow: 0 0 0 2px #b18597, 0 0.5em 0 0 #ffe3e2; */
+  transform: translate3d(0, 0.5em, -1em);
+}
+
+button.button_keys:active {
+  /* background: #da0909; */
+  transform: translate(0em, 0.75em);
+}
+button.button_keys:active::before {
+  /* box-shadow: 0 0 0 2px #b18597, 0 0 #da1b15; */
+  transform: translate3d(0, 0, -1em);
+}
+
+.block_img_popular {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.popular_block_image {
+  margin-bottom: 100px;
 }
 
 @keyframes lione1 {
@@ -776,7 +1198,7 @@ html {
   width: 800px;
   margin-bottom: 100px;
   border-radius: 2px;
-  background: url(img/banner..jpg);
+
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -800,10 +1222,6 @@ html {
   text-transform: uppercase;
 }
 
-.popular_flowers {
-  margin-top: 100px;
-}
-
 .nochnik_text {
   color: #fff;
   font-family: var(--Oswald-ExtraLight);
@@ -822,4 +1240,5 @@ html {
   --Cormorant-Light: 'Cormorant-Light';
   --Cormorant-Regular: 'Cormorant-Regular';
   --Roboto-Regular: 'Roboto-Regular';
+  --WindSong: 'WindSong';
 }

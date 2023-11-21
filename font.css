@@ -32,3 +32,8 @@
   font-family: Roboto-Regular;
   src: url(fonts/Roboto_Condensed/RobotoCondensed-Regular.ttf);
 }
+
+@font-face {
+  font-family: 'WindSong';
+  src: url(fonts/WindSong/WindSong-Regular.ttf);
+}
