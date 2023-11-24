@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
 
-    <title>Герлянды</title>
+    <title>Flowers</title>
   </head>
   <body>
     <header class="header_glavnayaStranica">
@@ -50,12 +50,7 @@
           <div class="header_block">
             <div class="novbar">
               <div class="logo_block">
-                <a href="">
-                  <img
-                    class="logo"
-                    src="img/favicon_io (1)/android-chrome-192x192.png"
-                    alt=""
-                /></a>
+                <a class="logo" href="Index.html">Flt</a>
               </div>
               <div class="block_menu">
                 <ul class="header_title">
@@ -189,8 +184,143 @@
               <img class="zoom_img" src="" alt="" />
               <p class="block_img_popular_text">Розы</p>
               <p class="block_img_popular_summa">500 000 сум</p>
-              <button class="button_keys btn">Купить</button>
+              <button class="button_keys btn"><a href=""></a>Купить</button>
             </div>
+          </div>
+          <div class="block_all_spisok">
+            <a class="view_katalog_1" href="Katalog.html"
+              >Смотреть весь каталог</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="how_to_make_order_block">
+        <div class="container">
+          <div class="how_make_order">
+            <h3 class="how_make_order_title">Как сделать заказ</h3>
+            <div class="block_order_list">
+              <div class="block_order_list_one">
+                <div class="order_steps">
+                  <h5 class="order_steps_title">1 шаг</h5>
+                  <p class="order_steps_list">
+                    Выберите какие цветы или подарки вы хотите купить
+                  </p>
+                </div>
+                <div class="order_steps">
+                  <h5 class="order_steps_title">2 шаг</h5>
+                  <p class="order_steps_list">
+                    Оформите заказ, и мы отправим вам подтверждение на
+                    электронную почту, а так же менеджер свяжется с вами по
+                    телефону или в WhatsApp
+                  </p>
+                </div>
+                <div class="order_steps">
+                  <h5 class="order_steps_title">3 шаг</h5>
+                  <p class="order_steps_list">
+                    Наши флористы бережно подойдут к созданию букета цветов в
+                    самом начале дня или накануне
+                  </p>
+                </div>
+              </div>
+              <div class="block_order_list_two">
+                <div class="order_steps">
+                  <h5 class="order_steps_title">4 шаг</h5>
+                  <p class="order_steps_list">
+                    Один из наших курьеров или партнёров доставит ваш заказ по
+                    указанному адресу. Мы отправим вам сообщение в Whats App как
+                    только заказ будет доставлен
+                  </p>
+                </div>
+                <div class="order_steps">
+                  <h5 class="order_steps_title">5 шаг</h5>
+                  <p class="order_steps_list">
+                    Наслаждайтесь цветами , если вы заказали их для дома или
+                    любовью, которой поделились, если вы заказали для друга
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="there_are_still_questions">
+        <div class="container">
+          <div class="questions_block">
+            <h3 class="questions_block_title">
+              осталисы <span class="questions_block_title_span">вопросы?</span>
+            </h3>
+            <div class="questions_block_input">
+              <p class="questions_block_input_text">
+                Отправьте ваш вопрос, заказ, предложение или жалобу через форму
+                обратной связи, и наш специалист свяжется с вами в течение 15
+                минут.
+              </p>
+              <div class="block__form">
+                <form class="form" onsubmit="sendEmailTelegram(event)">
+                  <div class="form__stripes-block">
+                    <div class="form__line"></div>
+                  </div>
+                  <div class="form__group">
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder="Ваше имя"
+                      autocomplete="off"
+                      maxlength="50"
+                      required
+                    />
+                    <input
+                      type="tel"
+                      name="phone"
+                      placeholder="+ 998 (90) 777 77 77"
+                      autocomplete="off"
+                      maxlength="15"
+                      required
+                    />
+
+                    <textarea
+                      name="comment"
+                      cols="40"
+                      rows="3"
+                      placeholder="Комментарий"
+                    ></textarea>
+                  </div>
+                  <div class="form__submit-block">
+                    <div class="form__submit-button">
+                      <button class="btn_tg" type="submit">Отправить</button>
+                      <p class="konfidencial">
+                        Нажимая на кнопку «Отправить», я даю свое согласие на
+                        обработку персональных данных, в соответствии с
+                        <a class="konfidencial_link" href=""
+                          >Политикой конфиденциальности</a
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </form>
+                <div class="form__send-result"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="customer_кeviews_block">
+        <div class="container">
+          <div class="customer_block">
+            <div class="customer_кeviews">
+              <img class="customer_кeviews_img" src="img/rose3.svg" alt="" />
+            </div>
+            <div class="customer_кeviews">
+              <img class="customer_кeviews_img" src="img/rose3.svg" alt="" />
+            </div>
+            <div class="customer_кeviews">
+              <img class="customer_кeviews_img" src="img/rose3.svg" alt="" />
+            </div>
+            <div class="customer_кeviews">
+              <img class="customer_кeviews_img" src="img/rose2.svg" alt="" />
+            </div>
+            <p class="flowers_podpis_кeviews">Flowers</p>
           </div>
         </div>
       </section>
@@ -199,11 +329,7 @@
       <div class="container">
         <div class="footer_list">
           <div class="footer_logo">
-            <img
-              class="footer_img"
-              src="img/favicon_io (1)/android-chrome-512x512.png"
-              alt=""
-            />
+            <a class="logo" href="Index.html">Flt</a>
           </div>
 
           <div class="footer_number">
