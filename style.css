@@ -28,7 +28,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  min-height: 975px;
+  min-height: 150vh;
   border-radius: none;
 }
 
@@ -99,6 +99,21 @@ body {
   align-items: center;
   gap: 30px;
 }
+
+.katalog_title_header::after {
+  content: '';
+  top: 0;
+  left: 500px;
+  width: 500px;
+  height: 500px;
+  background-image: url(img/1619734259_17-phonot.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+  position: absolute;
+}
+
 .block_contacts {
   display: flex;
   align-items: center;
@@ -261,6 +276,7 @@ body {
   letter-spacing: 2px;
   text-transform: uppercase;
   width: 500px;
+  position: relative;
 }
 
 .katalog_text_header {
@@ -437,7 +453,7 @@ body {
 }
 
 .katalog_block_header {
-  margin-bottom: 150px;
+  margin-bottom: 200px;
 }
 .katalog_text_span {
   color: #fff;
@@ -455,6 +471,41 @@ body {
   flex-direction: column;
   gap: 10px;
   position: relative;
+  transform: translate(0px, 5%);
+  opacity: 0;
+  transition: transform 1s ease, opacity 0.8s ease;
+}
+
+.popular_flowers {
+  transform: translate(0px, 5%);
+  opacity: 0;
+  transition: transform 1s ease, opacity 0.8s ease;
+  margin-bottom: 150px;
+}
+
+.how_make_order {
+  transform: translate(0px, 5%);
+  opacity: 0;
+  transition: 300ms;
+  transition: transform 1s ease, opacity 0.8s ease;
+}
+
+.how_make_order.active {
+  transform: translate(0px, 0);
+  transition: 300ms;
+  opacity: 1;
+}
+
+.katalog_title_text_block.active {
+  transform: translate(0px, 0);
+  transition: 300ms;
+  opacity: 1;
+}
+
+.popular_flowers.active {
+  transform: translate(0px, 0);
+  transition: 300ms;
+  opacity: 1;
 }
 .katalog_block .color_block:nth-child(1):hover::before {
   opacity: 1;
@@ -866,7 +917,6 @@ body {
   gap: 15px;
   padding: 10px;
 }
-
 .flowers_animation,
 .glowing,
 .tashkent {
@@ -875,11 +925,17 @@ body {
   justify-content: center;
   align-items: center;
   padding: 0 10px 0 10px;
+  transform: translateX(1000px);
+  opacity: 1;
+  transition: transform 1s ease, opacity 1s ease;
 }
 
-.popular_block_image {
-  display: flex;
-  justify-content: space-between;
+.flowers_animation.active,
+.glowing.active,
+.tashkent.active {
+  transform: translateX(0px);
+  opacity: 1;
+  transition: transform 1s ease, opacity 1s ease;
 }
 
 .main_text .glowing:nth-child(1) {
@@ -888,6 +944,11 @@ body {
   animation-delay: 1s;
   animation-duration: 2s;
   animation-iteration-count: infinite;
+}
+
+.popular_block_image {
+  display: flex;
+  justify-content: space-around;
 }
 
 .block_img_popular_text {
@@ -921,6 +982,7 @@ body {
   letter-spacing: 1.2px;
   text-transform: uppercase;
   color: #fff;
+  background: #43ffd2;
 }
 
 .button_keys {
@@ -928,12 +990,23 @@ body {
   font-weight: 600;
   color: #382b22;
   padding: 1.25em 2em;
-  /* background: #2486c7; */
   border: 2px solid #85b18e;
   border-radius: 0.75em;
   transition: transform 0.15s;
   transform-style: preserve-3d;
   cursor: pointer;
+}
+
+.instagram {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.telegram {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
 }
 
 .button_keys::before {
@@ -945,7 +1018,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgb(71, 201, 114);
+  background: #377272;
   border-radius: inherit;
   transform: translate3d(0, 0.75em, -1em);
   transition: transform 0.15s, box-shadow 0.15s;
@@ -1045,7 +1118,7 @@ button.button_keys:active::before {
   left: -500px;
   width: 1000px;
   height: 950px;
-  z-index: 5;
+  z-index: 10;
 }
 
 .questions_block_title::before {
@@ -1275,7 +1348,7 @@ textarea {
   background-repeat: no-repeat;
   background-image: url('img/order_flowers_steps.svg');
   top: 50px;
-  left: -245px;
+  left: -300px;
   display: flex;
 }
 
@@ -1294,9 +1367,21 @@ textarea {
   letter-spacing: 0.56px;
   text-transform: uppercase;
   width: 247px;
+  position: relative;
 }
-.popular_flowers {
-  margin-bottom: 100px;
+
+.order_steps_list::after {
+  content: '';
+  top: 0;
+  left: 500px;
+  width: 500px;
+  height: 500px;
+  background-image: url(img/1619734259_17-phonot.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+  position: absolute;
 }
 
 .view_katalog_1 {
