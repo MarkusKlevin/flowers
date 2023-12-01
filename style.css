@@ -1,4 +1,5 @@
 @import 'font.css';
+@import 'media.css';
 
 * {
   padding: 0;
@@ -156,10 +157,6 @@ body {
 .header_text:hover {
   color: #00f7a5;
   transition: 400ms;
-}
-
-main {
-  margin-top: 150px;
 }
 
 .main_katalog {
@@ -776,15 +773,19 @@ body {
   text-transform: uppercase;
 }
 
+.page_not_found_404 {
+  overflow: hidden;
+}
+
 .footer_block {
   background: #000;
   z-index: 1;
+  padding: 20px 0;
 }
 .footer_list {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 0;
 }
 
 .telegram_background {
@@ -1121,6 +1122,35 @@ button.button_keys:active::before {
   z-index: 10;
 }
 
+.questions_block_title_contact {
+  color: #fff;
+  font-family: var(--Cormorant-Light);
+  font-size: 100px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  position: relative;
+  margin-bottom: 150px;
+}
+
+.questions_block_title_contact::after {
+  position: absolute;
+  content: '';
+  background-image: url(img/rose_contact.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+  top: -150px;
+  left: -500px;
+  width: 1000px;
+  height: 950px;
+  z-index: 10;
+  transform: rotate(23.828deg);
+  z-index: -1;
+}
+
 .questions_block_title::before {
   position: absolute;
   top: 50px;
@@ -1136,6 +1166,13 @@ button.button_keys:active::before {
 
 .questions_block_title_span {
   margin-left: 100px;
+}
+
+.questions_block_title_span_contact {
+  margin-left: 0;
+  display: flex;
+  align-items: end;
+  justify-content: end;
 }
 
 .questions_block_input {
@@ -1161,6 +1198,10 @@ button.button_keys:active::before {
 
 .there_are_still_questions {
   margin-bottom: 100px;
+}
+
+.there_are_still_questions_contact {
+  margin-bottom: 300px;
 }
 
 .form__group input,
@@ -1271,6 +1312,7 @@ textarea {
   font-weight: 400;
   line-height: normal;
   letter-spacing: 0.2px;
+  margin-bottom: 20px;
 }
 
 .konfidencial_link {
@@ -1296,6 +1338,12 @@ textarea {
 .questions_block {
   display: flex;
   gap: 50px;
+}
+
+.questions_block_contact {
+  display: flex;
+  gap: 50px;
+  margin: 100px 0;
 }
 
 .how_to_make_order_block {
@@ -1667,6 +1715,222 @@ textarea {
   letter-spacing: 0.4px;
 }
 
+.not_found_link {
+  font-family: var(--Cormorant-Light);
+  font-size: 600px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 12px;
+  text-transform: uppercase;
+  background: linear-gradient(
+    180deg,
+    #163d8f 0%,
+    #163d8f 0%,
+    #4f6cab 54.69%,
+    #b6cdff 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.not_found_list {
+  display: flex;
+  margin-top: -150px;
+  position: relative;
+  justify-content: top;
+  align-items: top;
+}
+
+.not_found_list .not_found_link:nth-child(2) {
+  display: flex;
+  margin-top: 200px;
+  margin-left: -50px;
+  z-index: 3;
+}
+
+.not_found_list .not_found_link:nth-child(3) {
+  display: flex;
+  margin-top: -70px;
+  margin-left: -150px;
+  z-index: -1;
+}
+
+.not_found_list .not_found_link:nth-child(1) {
+  z-index: -1;
+}
+
+.not_found_block_one {
+  height: 1000px;
+  /* overflow: hidden; */
+}
+
+.not_found_block_all {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.not_found_list::after {
+  content: '';
+  background: url(img/404\ flowers.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 1200px;
+  height: 1000px;
+  z-index: 1;
+  position: absolute;
+  bottom: -312px;
+  left: -145px;
+}
+
+.not_found_block_two_link {
+  color: #fff;
+  font-family: var(--Oswald-Light);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.56px;
+  text-transform: uppercase;
+}
+
+.not_found_block_two_list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.not_found {
+  color: #43ffd2;
+  font-family: var(--Oswald-Light);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.56px;
+  text-decoration-line: underline;
+  text-transform: uppercase;
+  z-index: 20;
+  position: relative;
+}
+
+.not_found_list::before {
+  content: '';
+  border-radius: 600.642px;
+  background: #163d8f;
+  filter: blur(125px);
+  width: 283.416px;
+  height: 600.642px;
+  transform: rotate(21.097deg);
+  flex-shrink: 0;
+  position: absolute;
+  bottom: -400px;
+  left: -200px;
+  z-index: 5;
+}
+
+.kontakt_block_address {
+  width: 255px;
+  height: 255px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  z-index: 1;
+}
+
+.kontakt_block_address_title {
+  color: #43ffd2;
+  font-family: var(--Oswald-Regular);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.kontakt_block_address_text {
+  color: #fff;
+  text-align: center;
+  font-family: var(--Oswald-Light);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 26px; /* 130% */
+  letter-spacing: 0.4px;
+  width: 144px;
+}
+
+.kontakts {
+  display: flex;
+  gap: 30px;
+  padding: 100px 0;
+  position: relative;
+  z-index: 10;
+}
+
+.kontakts .kontakt_block_address_text:nth-child(2) {
+  width: 201px;
+}
+
+.kontakts::after {
+  content: '';
+  width: 450px;
+  height: 220.329px;
+  transform: rotate(-71.859deg);
+  flex-shrink: 0;
+  border-radius: 465.711px;
+  background: #922d2d;
+  filter: blur(125px);
+  position: absolute;
+  left: -300px;
+  top: 100px;
+  z-index: -1;
+}
+
+.kontakt_block_address:nth-child(4) {
+  position: relative;
+  z-index: 2;
+}
+
+.kontakt_block_address:nth-last-of-type(1)::before {
+  content: '';
+  position: absolute;
+  top: -200px;
+  right: -500px;
+  background: url(img/rose_contact.svg);
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-width: 700px;
+  min-height: 700px;
+  transform: rotate(-32.828deg);
+  z-index: -5;
+}
+
+.kontakts::before {
+  content: '';
+  width: 1006.455px;
+  height: 124.88px;
+  transform: rotate(-165.265deg);
+  flex-shrink: 0;
+  border-radius: 1006.455px;
+  background: #922d2d;
+  filter: blur(125px);
+  position: absolute;
+  right: 0;
+  bottom: 100px;
+  z-index: -1;
+}
 :root {
   --Oswald-Regular: 'Oswald-Regular';
   --Oswald-Light: 'Oswald-Light';

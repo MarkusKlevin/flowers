@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="media.css" />
 
     <title>Герлянды</title>
   </head>
@@ -54,10 +55,18 @@
               </div>
               <div class="block_menu">
                 <ul class="header_title">
-                  <li><a class="header_text" href="katalog.html">Каталог</a></li>
-                  <li><a class="header_text" href="dostavka.html">Доставка и оплата</a></li>
-                  <li><a class="header_text" href="kontakt.html">Контакты</a></li>
-                  <li><a class="header_text" href="">FAQ</a></li>
+                  <li>
+                    <a class="header_text" href="katalog.html">Каталог</a>
+                  </li>
+                  <li>
+                    <a class="header_text" href="dostavka.html"
+                      >Доставка и оплата</a
+                    >
+                  </li>
+                  <li>
+                    <a class="header_text" href="kontakt.html">Контакты</a>
+                  </li>
+                  <li><a class="header_text" href="Faq.html">FAQ</a></li>
                 </ul>
               </div>
               <div class="block_contacts">
@@ -71,35 +80,129 @@
     </header>
 
     <main>
-      <div class="container">
-  
+      <section class="kontakt_block">
+        <div class="container">
+          <div class="kontakts">
+            <div class="kontakt_block_address">
+              <p class="kontakt_block_address_title">время работы</p>
+              <p class="kontakt_block_address_text">
+                с 10:00 до 19:00 без выходных
+              </p>
+            </div>
+            <div class="kontakt_block_address">
+              <p class="kontakt_block_address_title">Адрес</p>
+              <p class="kontakt_block_address_text">
+                Ташкентская область, Зангиатинсий район
+              </p>
+            </div>
+            <div class="kontakt_block_address">
+              <p class="kontakt_block_address_title">Телефон</p>
+              <a
+                class="kontakt_block_address_text"
+                href="tel:+998 (90) 000 00 00"
+                >+998 (90) 000 00 00</a
+              >
+            </div>
+            <div class="kontakt_block_address">
+              <p class="kontakt_block_address_title">E-mail</p>
+              <a
+                class="kontakt_block_address_text"
+                href="mailto:markus.klevin17@gmail.com"
+              >
+                markus.klevin17@gmail.com</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
 
- 
-   
+      <section class="there_are_still_questions_contact">
+        <div class="container">
+          <div class="questions_block_contact">
+            <h3 class="questions_block_title_contact _anim_items _anim_no_hide">
+              Напишите
+              <span class="questions_block_title_span_contact">нам</span>
+            </h3>
+            <div class="questions_block_input">
+              <p class="questions_block_input_text">
+                Отправьте ваш вопрос, заказ, предложение или жалобу через форму
+                обратной связи, и наш специалист свяжется с вами в течение 15
+                минут.
+              </p>
+              <div class="block__form">
+                <form class="form" onsubmit="sendEmailTelegram(event)">
+                  <div class="form__stripes-block">
+                    <div class="form__line"></div>
+                  </div>
+                  <div class="form__group">
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder="Ваше имя"
+                      autocomplete="off"
+                      maxlength="50"
+                      required
+                    />
+                    <input
+                      type="tel"
+                      name="phone"
+                      placeholder="+ 998 (90) 777 77 77"
+                      autocomplete="off"
+                      maxlength="15"
+                      required
+                    />
 
-      
+                    <textarea
+                      name="comment"
+                      cols="40"
+                      rows="3"
+                      placeholder="Комментарий"
+                    ></textarea>
+                  </div>
+                  <div class="form__submit-block">
+                    <div class="form__submit-button">
+                      <button class="btn_tg" type="submit">Отправить</button>
+                      <p class="konfidencial">
+                        Нажимая на кнопку «Отправить», я даю свое согласие на
+                        обработку персональных данных, в соответствии с
+                        <a class="konfidencial_link" href=""
+                          >Политикой конфиденциальности</a
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </form>
+                <div class="form__send-result"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="footer_block">
       <div class="container">
-      <div class="footer_list">
-        <div class="footer_logo">
-          <a class="logo" href="Index.html">Flt</a>
-        </div>
-      
-        <div class="footer_number">
-          <div class="footer_icon">
-            <img src="img/instagram.svg" alt="">
-            <img src="img/whatsap.svg" alt="">
+        <div class="footer_list">
+          <div class="footer_logo">
+            <a class="logo" href="Index.html">Flt</a>
           </div>
-          <a class="footer_number_link" href="tel:+998908085008">998(90) 000-00-00</a>
+
+          <div class="footer_number">
+            <div class="footer_icon">
+              <a href="">
+                <img class="instagram" src="img/icon/b/instagram.svg" alt=""
+              /></a>
+              <a href="https://t.me/+2px013kVzag0ZjBi"
+                ><img class="telegram" src="img/icon/b/telegram.svg" alt=""
+              /></a>
+            </div>
+            <a class="footer_number_link" href="tel:+998908085008"
+              >998(90) 000-00-00</a
+            >
+          </div>
         </div>
       </div>
-    </div>
     </footer>
 
     <script src="script.js"></script>
-
-
-
   </body>
 </html>
